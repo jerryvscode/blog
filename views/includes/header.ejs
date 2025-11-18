@@ -1,0 +1,23 @@
+<header>
+  <div class="header-div">
+    <div class="logo-div">
+      <img class="logo" src="/logo/logo.jpg" onclick="location.href='/';">
+    </div>
+    <div class="header-buttons">
+      <button class="article-button" onclick="location.href='/';">Artikel</button>
+      <button class="articlewish-button" onclick="location.href='/articlewish.ejs';">Artikelwunsch</button>
+      <button class="contact-button" onclick="location.href='/contact.ejs';">Kontakt</button>
+      <% if (user.username == "admin") {%>
+        <button class="user-icon-button" onclick="location.href='/dashboard-admin.ejs';">
+        <img class="user-icon" src="/user-icon.svg">
+      <% } else if (user) { %>
+        <button class="user-icon-button" onclick="location.href='dashboard.ejs';">
+        <img class="user-icon" src="/user-icon.svg">
+      <% } else { %>
+        <button class="user-icon-button" onclick="location.href='account.ejs';">
+        <img class="user-icon" src="/user-icon.svg">
+      <%}%>
+      </button>
+    </div>
+  </div>
+</header>

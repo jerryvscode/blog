@@ -1,0 +1,94 @@
+/* Header */
+
+.article-button {
+  background-color: rgb(125, 141, 134);
+
+  color: white;
+}
+
+.articlewish-button,
+.contact-button {
+  background-color: rgb(241, 240, 228);
+
+  color: black;
+}
+
+/* Artikel */
+
+.articles {
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+  display: grid;
+  column-gap: 30px;
+  row-gap: 70px;
+}
+
+.article-image {
+  width: 100%;
+  max-height: 250px;
+
+  border-radius: 10px;
+}
+
+.article-div {
+  max-height: 400px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  cursor: pointer;
+}
+
+.article-text {
+  max-height: 80px;
+
+  text-align: center;
+}
+
+.article-title {
+  margin-top: 10px;
+
+  font-size: 19px;
+  font-weight: bold;
+  color: rgb(62, 63, 41);
+}
+
+.article-description {
+  margin-top: -12px;
+
+  font-size: 16px;
+}
+
+/* Bildschirmanpassung */
+
+@media (max-width: 600px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 950px) {
+  .articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 951px) and (max-width: 1500px) {
+  .articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 2000px) {
+  .articles {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 2001px) {
+  .articles {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}

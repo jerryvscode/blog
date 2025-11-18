@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp</title>
+    <link rel="stylesheet" href="/general.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/contact.css">
+  </head>
+
+  <body>
+    <%- include("includes/header") %>
+    
+    <main>
+      <div class="contact-div">
+        <p class="contact-name"><%= admin.username %></p>
+        <p class="contact-email"><%= adminEmail.adminemail %></p>
+      </div>
+    </main>
+  </body>
+</html>

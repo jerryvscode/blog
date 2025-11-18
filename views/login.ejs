@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp</title>
+    <link rel="stylesheet" href="/general.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/account.css">
+  </head>
+  
+  <body>
+    <%- include("includes/header") %>
+    <main>
+      <div class="login-div">
+
+        <!---->
+        <form action="/login" method="POST">
+          <% errors.forEach(error => { %>
+          <p class="notice"><%= errors %></p>
+          <% }) %>
+          <!---->
+          <div class="login-register-form">
+            <legend class="login-register-legend">Einloggen</legend>
+            <input class="username-input" id="username" name="username" placeholder="Benutzername...">
+            <input class="password-input" id="password" name="password" type="password" placeholder="Passwort..."></input>
+            <button class="send-button">Einloggen</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
